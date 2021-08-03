@@ -11,13 +11,14 @@ public class main {
             System.out.println("הכנס מספר");
             arr [i] = input.nextInt();
         }
-
+    int a =1;
         System.out.println("הספרה 8 נמצאת במיקום " + findnam(arr,8)) ;
         System.out.println("המספר הכי גדול הוא " + max(arr)) ;
         System.out.println("המספר הכי קטן הוא " + min(arr)) ;
         System.out.println("הממוצע הוא " + avg(arr)) ;
         System.out.println("סכום המספרים הזוגיים הוא " + zugi(arr)) ;
         System.out.println("סכום המספרים האי זוגיים הוא " + yzugi(arr)) ;
+
 
         System.out.println("הכנס שני מספרים");
         int nam1 = input.nextInt();
