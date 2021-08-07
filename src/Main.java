@@ -5,6 +5,12 @@ public class Main {
     public static void  main(String[] args){
         Scanner input = new Scanner(System.in);
 
+        System.out.println("הכנס טקסט");
+        String a = input.nextLine();
+        System.out.println("הכנס טקסט");
+        String b = input.nextLine();
+        System.out.println(hashve(a,b));
+
         int [] arr = new int[5];
 
         for (int i = 0; i < arr.length; i++){
@@ -24,25 +30,25 @@ public class Main {
         int nam2 = input.nextInt();
 
         System.out.println("הכנס פעולת חשבון");
-        String sing = input.nextLine();
+        char sing = input.next().charAt(0);
 
         calc(nam1,nam2,sing);
     }
 
-    public static void calc (int nam1,int nam2,String sing){
+    public static void calc (int nam1,int nam2,char sing){
 
         switch (sing){
-            case "+":
-                System.out.println(nam1+nam2) ;
+            case '+':
+                System.out.println("התוצאה היא "+ (nam1+nam2)) ;
                 break;
-            case "-":
-                System.out.println(nam1-nam2) ;
+            case '-':
+                System.out.println("התוצאה היא "+ (nam1-nam2)) ;
                 break;
-            case "*":
-                System.out.println(nam1*nam2) ;
+            case '*':
+                System.out.println("התוצאה היא "+ (nam1*nam2)) ;
                 break;
-            case "/":
-                System.out.println(nam1/nam2) ;
+            case '/':
+                System.out.println("התוצאה היא "+ (nam1/nam2)) ;
                 break;
         }
     }
@@ -72,7 +78,7 @@ public class Main {
         for (int i = 0; i < arrr.length; i++ ){
             n=n+ arrr[i];
         }
-        return n / arrr.length;
+        return (n / arrr.length);
     }
 
     public static int zugi (int [] arrr){
@@ -108,6 +114,15 @@ public class Main {
 
         }else {
             return i;
+        }
+    }
+    public static String hashve(String a,String b){
+        String a1 = a.toUpperCase();
+        String b1 = b.toUpperCase();
+        if (a1.compareTo(b1) == 0){
+           return "המחרוזות שוות";
+        }else {
+            return "המחרוזות לא שוות";
         }
     }
 }
